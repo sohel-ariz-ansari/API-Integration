@@ -20,6 +20,7 @@ export class UsersComponent implements OnInit {
     this.apiService.getData().subscribe({
       next: (response: any[]) => {
         this.users = response;
+        console.log('API Response:', response);
       },
       error: (err: any) => {
         console.error('Error while fetching data', err);
