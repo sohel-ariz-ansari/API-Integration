@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api/api.service';
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
 })

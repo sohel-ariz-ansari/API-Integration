@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient  } from '@angular/common/http';
 import { UsersComponent } from './app/users/users/users.component';
+
 
 // Root component (App) or directly using the UsersComponent
 @Component({
@@ -19,5 +20,7 @@ export class App {
 
 // Bootstrap the root app component
 bootstrapApplication(App, {
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
 });
